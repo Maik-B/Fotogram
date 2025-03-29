@@ -9,6 +9,20 @@
   </head>
   <script src="script.js"></script>
   <body onload="render(arrayImg1)">
+    <div onclick="toggleOverlay()" id="overlay" class="overlay d_none">
+      <div class="img_dialog">
+        <div id="dialog_head">
+          <h2 id="dialog_title">img_titel</h2>
+          <button>X</button>
+        </div>
+        <div id="dialog_body"></div>
+        <div id="dialog_footer">
+          <button><-</button>
+          <span>1/1</span>
+          <button>-></button>
+        </div>
+      </div>
+    </div>
     <header>
       <img src="./img/meta/Fotogram_Logo.svg" alt="Fotogram_Logo" />
     </header>

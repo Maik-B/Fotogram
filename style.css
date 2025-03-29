@@ -81,3 +81,76 @@ footer {
   height: 10rem;
   background-color: rgb(0, 7, 83);
 }
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100dvh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .img_dialog {
+    width: 60dvw;
+    height: 60dvh;
+    background-color: rgb(9, 36, 51);
+    border-radius: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    #dialog_head {
+      margin: 2.5rem;
+      display: flex;
+      justify-content: space-between;
+      h2 {
+        font-size: 2.8rem;
+        color: white;
+        font-weight: lighter;
+      }
+      button {
+        border: none;
+        margin-right: 2rem;
+        background: none;
+        color: white;
+        text-align: center;
+        font-size: 2rem;
+      }
+    }
+    #dialog_body {
+      margin: 2rem;
+      display: flex;
+      justify-content: center;
+      rotate: 90deg;
+      img {
+        width: 30dvh;
+        height: 40dvw;
+      }
+    }
+    #dialog_footer {
+      display: flex;
+      margin-top: auto;
+      margin-bottom: 4rem;
+      justify-content: space-around;
+      span {
+        font-size: 1.8rem;
+        color: white;
+      }
+      button {
+        width: 4rem;
+        height: 4rem;
+        font-size: 3rem;
+        color: rgb(180, 90, 25);
+        border: none;
+        border-radius: 50%;
+        background-color: rgba(18, 10, 0, 0.75);
+      }
+    }
+  }
+}
+
+.d_none {
+  display: none;
+}

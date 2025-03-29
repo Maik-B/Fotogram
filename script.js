@@ -150,7 +150,15 @@ function render(arrayImg){
 
 function getPicturesHTML(x, arrayImg){
     return `<div class="single_element">
-                                    <img src="./img/${arrayImg[x]}" alt="${arrayImg[x]}" />
+                                    <img onClick = toggleOverlay("${arrayImg[x]}") src="./img/${arrayImg[x]}" alt="${arrayImg[x]}" />
                                 </div>`;
     
+}
+
+function toggleOverlay(index){
+    let overlayRef = document.getElementById(`overlay`);
+    let img_html= `<img src="./img/${index}" alt="${index}" />`;
+    document.getElementById(`dialog_body`).innerHTML = img_html;
+    //document.getElementById(`dialog_title`).innerHTML = index;
+    overlayRef.classList.toggle(`d_none`);
 }
