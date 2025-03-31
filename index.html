@@ -8,23 +8,28 @@
     <link rel="shortcut icon" href="./img/meta/favicon.png" type="image/png" />
   </head>
   <script src="script.js"></script>
-  <body onload="render(arrayImg1)">
-    <div onclick="toggleOverlay()" id="overlay" class="overlay d_none">
-      <div class="img_dialog">
-        <div id="dialog_head">
-          <h2 id="dialog_title">img_titel</h2>
-          <button>X</button>
-        </div>
-        <div id="dialog_body"></div>
-        <div id="dialog_footer">
-          <button><-</button>
-          <span>1/1</span>
-          <button>-></button>
-        </div>
+  <body onload="render(0)">
+    <div onclick="toggleOverlay()" id="overlay" class="overlay d_none"></div>
+    <div class="img_dialog d_none" id="img_dialog">
+      <div id="dialog_head">
+        <h2 id="dialog_title">img_titel</h2>
+        <button onclick="toggleOverlay()">X</button>
       </div>
+      <div id="dialog_body"></div>
+      <div id="dialog_footer"></div>
     </div>
     <header>
-      <img src="./img/meta/Fotogram_Logo.svg" alt="Fotogram_Logo" />
+      <img
+        id="logo_big"
+        src="./img/meta/Fotogram_Logo.svg"
+        alt="Fotogram_Logo"
+      />
+      <img
+        id="logo_small"
+        class="d_none"
+        src="./img/meta/favicon.png"
+        alt="Fotogram_Logo"
+      />
     </header>
     <main>
       <section id="title"><h1>Your personal photo album</h1></section>

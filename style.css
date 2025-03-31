@@ -7,22 +7,35 @@
 html {
   font-size: 10px;
 }
-
+body {
+  display: flex;
+  flex-direction: column;
+}
 header {
   height: 10rem;
   width: 100%;
   display: flex;
-  align-content: center;
+  flex-direction: row;
   background: rgb(0, 7, 83);
+  align-items: flex-start;
+  justify-content: flex-start;
   img {
+    height: 10rem;
     padding: 2rem 4rem;
+  }
+  @media (max-width: 410px) {
+    #logo_big {
+      display: none;
+    }
+    #logo_small {
+      display: flex;
+    }
   }
 }
 main {
   min-height: 78.8dvh;
   background-color: rgb(0, 0, 43);
   color: white;
-  font-size: 3.6rem;
 
   display: flex;
   flex-direction: column;
@@ -30,7 +43,15 @@ main {
 
   h1 {
     font-family: sans-serif;
+    text-align: center;
+    font-size: 4.8rem;
     margin: 3rem;
+    @media (max-width: 780px) {
+      font-size: 4rem;
+    }
+    @media (max-width: 685px) {
+      margin: 4rem 1rem;
+    }
   }
 
   #photos {
@@ -49,18 +70,20 @@ main {
     }
     img:hover {
       cursor: pointer;
-      border: white solid 2px;
+      border: white solid 0.2rem;
+    }
+    @media (max-width: 685px) {
+      margin: 4rem 1rem;
     }
   }
 
   #filter {
-    height: 2rem;
     display: flex;
     justify-self: flex-end;
     margin-top: auto;
     margin-bottom: 4rem;
     button {
-      margin-left: 1rem;
+      margin: 0.5rem;
       height: 3rem;
       width: 3rem;
       border: darkmagenta solid 1px;
@@ -74,10 +97,14 @@ main {
       background: rgb(0, 20, 83);
       border-color: white;
     }
+    @media (max-width: 570px) {
+      flex-wrap: wrap;
+    }
   }
 }
 
 footer {
+  margin-top: auto;
   height: 10rem;
   background-color: rgb(0, 7, 83);
 }
@@ -93,60 +120,80 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  .img_dialog {
-    width: 60dvw;
-    height: 60dvh;
-    background-color: rgb(9, 36, 51);
-    border-radius: 4rem;
+}
+
+.img_dialog {
+  width: 60dvw;
+  height: 60dvh;
+  background-color: rgb(9, 36, 51);
+  border-radius: 4rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 6;
+  #dialog_head {
+    margin: 2.5rem;
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    #dialog_head {
-      margin: 2.5rem;
-      display: flex;
-      justify-content: space-between;
-      h2 {
-        font-size: 2.8rem;
-        color: white;
-        font-weight: lighter;
-      }
-      button {
-        border: none;
-        margin-right: 2rem;
-        background: none;
-        color: white;
-        text-align: center;
-        font-size: 2rem;
-      }
+    h2 {
+      font-size: 2.8rem;
+      color: white;
+      font-weight: lighter;
     }
-    #dialog_body {
-      margin: 2rem;
-      display: flex;
-      justify-content: center;
-      rotate: 90deg;
-      img {
-        width: 30dvh;
-        height: 40dvw;
-      }
+    button {
+      border: none;
+      width: 3rem;
+      height: 3rem;
+      margin-right: 2rem;
+      background: none;
+      color: white;
+      text-align: center;
+      font-size: 2rem;
     }
-    #dialog_footer {
-      display: flex;
-      margin-top: auto;
-      margin-bottom: 4rem;
-      justify-content: space-around;
-      span {
-        font-size: 1.8rem;
-        color: white;
-      }
-      button {
-        width: 4rem;
-        height: 4rem;
-        font-size: 3rem;
-        color: rgb(180, 90, 25);
-        border: none;
-        border-radius: 50%;
-        background-color: rgba(18, 10, 0, 0.75);
-      }
+    button:hover {
+      cursor: pointer;
+      border-radius: 50%;
+      border: solid 0.1rem white;
+    }
+  }
+  #dialog_body {
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    img {
+      width: 30dvw;
+      height: 40dvh;
+    }
+  }
+  #dialog_footer {
+    display: flex;
+    margin-top: auto;
+    margin-bottom: 4rem;
+    justify-content: space-around;
+    span {
+      font-size: 1.8rem;
+      color: white;
+    }
+    button {
+      width: 4rem;
+      height: 4rem;
+      font-size: 3rem;
+      font-weight: bold;
+      text-align: center;
+      padding-bottom: 0.5rem;
+      color: rgb(180, 90, 25);
+      border: none;
+      border-radius: 50%;
+      background-color: rgba(18, 10, 0, 0.75);
+    }
+    button:hover {
+      cursor: pointer;
+      border: solid 0.1rem white;
     }
   }
 }
