@@ -177,11 +177,8 @@ function toggleOverlay(index, arrayPosition){
 
 function switchImage(arrayPosition, direction){
     console.log("test 1: "+arrayPosition + " " + direction);
-
     let newArrayPosition = arrayPosition + direction;
-
     console.log("test 2: " + newArrayPosition);
-    
     if(newArrayPosition+1 > arrayImg_Collection.length){
         newArrayPosition = 0;
         console.log("test omega: " + newArrayPosition);

@@ -154,7 +154,7 @@ footer {
   @media (max-width: 544px) {
     margin-top: -40%;
   }
-  @media (max-width: 375px) {
+  @media (max-width: 359px) {
     margin-top: -175%;
   }
   #dialog_head {
@@ -196,13 +196,14 @@ footer {
       align-self: center;
       @media (max-width: 430px) {
         rotate: 90deg;
+
+        height: 90dvw;
       }
     }
     @media (max-width: 975px) {
       margin-top: 5rem;
       img {
         width: 40dvw;
-        height: 90dvw;
         object-fit: contain;
       }
     }
